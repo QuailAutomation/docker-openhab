@@ -1,7 +1,9 @@
 # Openhab 1.8.2
 # * configuration is injected
 #
-FROM java:openjdk-8-jdk
+FROM cogniteev/oracle-java:java8
+
+#FROM java:openjdk-8-jdk
 MAINTAINER Tom Deckers <tom@ducbase.com>
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -10,7 +12,7 @@ RUN apt-get -y update \
   && apt-get -y upgrade \
   && apt-get -y install unzip supervisor wget
 
-ENV OPENHAB_VERSION 1.8.2
+ENV OPENHAB_VERSION 1.8.3
 
 #
 # Download openHAB based on Environment OPENHAB_VERSION

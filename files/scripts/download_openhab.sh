@@ -3,13 +3,17 @@
 
 if [[ $OPENHAB_VERSION == "SNAPSHOT" ]]
 then
-  wget --quiet --no-cookies -O /tmp/distribution-runtime.zip https://openhab.ci.cloudbees.com/job/openHAB/lastBuild/artifact/distribution/target/distribution-1.8.0-SNAPSHOT-runtime.zip
-  wget --quiet --no-cookies -O /tmp/distribution-addons.zip https://openhab.ci.cloudbees.com/job/openHAB/lastBuild/artifact/distribution/target/distribution-1.8.0-SNAPSHOT-addons.zip
-  wget --quiet --no-cookies -O /tmp/demo-openhab.zip https://openhab.ci.cloudbees.com/job/openHAB/lastBuild/artifact/distribution/target/distribution-1.8.0-SNAPSHOT-demo.zip
+  wget --quiet --no-cookies -O /tmp/distribution-runtime.zip https://bintray.com/openhab/bin/download_file?file_path=distribution-1.8.3-runtime.zip
+  wget --quiet --no-cookies -O /tmp/distribution-addons.zip https://bintray.com/openhab/bin/download_file?file_path=distribution-1.8.3-addons.zip
+  wget --quiet --no-cookies -O /tmp/demo-openhab.zip https://bintray.com/openhab/bin/download_file?file_path=distribution-1.8.3-demo.zip
 else
-  wget --quiet --no-cookies -O /tmp/distribution-runtime.zip https://bintray.com/artifact/download/openhab/bin/distribution-$OPENHAB_VERSION-runtime.zip 
-  wget --quiet --no-cookies -O /tmp/distribution-addons.zip https://bintray.com/artifact/download/openhab/bin/distribution-$OPENHAB_VERSION-addons.zip 
-  wget --quiet --no-cookies -O /tmp/demo-openhab.zip https://bintray.com/artifact/download/openhab/bin/distribution-$OPENHAB_VERSION-demo.zip 
+  wget --quiet --no-cookies -O /tmp/distribution-runtime.zip https://bintray.com/openhab/bin/download_file?file_path=distribution-1.8.3-runtime.zip
+  wget --quiet --no-cookies -O /tmp/distribution-addons.zip https://bintray.com/openhab/bin/download_file?file_path=distribution-1.8.3-addons.zip
+  wget --quiet --no-cookies -O /tmp/demo-openhab.zip https://bintray.com/openhab/bin/download_file?file_path=distribution-1.8.3-demo.zip
+
+  #wget --quiet --no-cookies -O /tmp/distribution-runtime.zip https://bintray.com/artifact/download/openhab/bin/distribution-$OPENHAB_VERSION-runtime.zip 
+  #wget --quiet --no-cookies -O /tmp/distribution-addons.zip https://bintray.com/artifact/download/openhab/bin/distribution-$OPENHAB_VERSION-addons.zip 
+  #wget --quiet --no-cookies -O /tmp/demo-openhab.zip https://bintray.com/artifact/download/openhab/bin/distribution-$OPENHAB_VERSION-demo.zip 
 fi
 
 wget --quiet --no-cookies -O /tmp/hyperic-sigar-1.6.4.tar.gz http://downloads.sourceforge.net/project/sigar/sigar/1.6/hyperic-sigar-1.6.4.tar.gz
